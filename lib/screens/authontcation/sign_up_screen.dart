@@ -90,23 +90,23 @@ class SignUpScreen extends StatelessWidget {
               const SizedBox(
                 height: 10,
               ),
-              // CustomText(
-              //   text: "Email",
-              //   color: ColorsApp.primaryColor,
-              //   fontSise: 24,
-              //   fontWeight: FontWeight.w500,
-              // ),
-              // const SizedBox(
-              //   height: 10,
-              // ),
-              // const CustomTextField(
-              //   color: ColorsApp.white,
-              //   keyBordType: TextInputType.emailAddress,
-              // ),
-              SizedBox(
+              CustomText(
+                text: "Email",
+                color: ColorsApp.primaryColor,
+                fontSise: 24,
+                fontWeight: FontWeight.w500,
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              const CustomTextField(
+                color: ColorsApp.white,
+                keyBordType: TextInputType.emailAddress,
+              ),
+           const   SizedBox(
                 height: 38,
               ),
-              Center(
+        const      Center(
                 child: CustomButton(
                   text: "REGISTRATION",
                   height: 64,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:parentroad/screens/authontcation/sign_up_screen.dart';
 import 'package:parentroad/sheard/app_colors.dart';
 import 'package:parentroad/widgets/custom_button.dart';
 import 'package:parentroad/widgets/custom_text_form_feild.dart';
@@ -15,7 +16,7 @@ class LoginScreen extends StatelessWidget {
         backgroundColor: ColorsApp.white,
         elevation: 0.0,
         leading: Container(
-          margin: const EdgeInsets.all(10),
+          margin: const EdgeInsets.all(8),
           decoration: BoxDecoration(
             color: ColorsApp.mainTextColor,
             shape: BoxShape.circle,
@@ -38,6 +39,7 @@ class LoginScreen extends StatelessWidget {
           ),
         ),
         margin: const EdgeInsets.only(top: 10),
+        padding: const EdgeInsets.only(left: 10),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -57,27 +59,54 @@ class LoginScreen extends StatelessWidget {
               height: 150,
             ),
             Container(
-              margin: const EdgeInsets.only(left: 20),
-              child: Column(
-                children: const [
-                  CustomTextField(
-                    text: "Email",
-                 color:ColorsApp.white,
+              padding: const EdgeInsets.only(left: 5),
 
+
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Align(
+
+                    alignment: Alignment.topLeft,
+
+                    child: CustomText(
+                      text: "Email",
+                      color: ColorsApp.primaryColor,
+                      fontSise: 24,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  const CustomTextField(
+                    color: ColorsApp.white,
                     keyBordType: TextInputType.emailAddress,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 30,
                   ),
-                  CustomTextField(
+                  Align(
+                    alignment: Alignment.topLeft,
+                    child: CustomText(
+                      text: "Password",
+                      color: ColorsApp.primaryColor,
+                      fontSise: 24,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  const CustomTextField(
                     text: "password",
-                    color:ColorsApp.white,
+                    color: ColorsApp.white,
                   ),
                 ],
               ),
             ),
-            const SizedBox(
-              height: 90,
+            SizedBox(
+              height: MediaQuery.of(context).size.height * .17,
             ),
             SizedBox(
               width: double.infinity,
@@ -87,15 +116,25 @@ class LoginScreen extends StatelessWidget {
                     width: 230,
                     height: 51,
                     text: "LOGIN",
+
                   ),
                   const SizedBox(
                     height: 16,
                   ),
-                  CustomText(
-                    text: "Forget the password ! ",
-                    color: ColorsApp.primaryColor,
-                    fontWeight: FontWeight.bold,
-                    fontSise: 15,
+                  InkWell(
+                    onTap: () {
+                      MaterialPageRoute(
+                          builder: (context) => const SignUpScreen());
+                    },
+                    child: InkWell(
+                      onTap: () {},
+                      child: CustomText(
+                        text: "Forget the password ! ",
+                        color: ColorsApp.primaryColor,
+                        fontWeight: FontWeight.bold,
+                        fontSise: 15,
+                      ),
+                    ),
                   ),
                   const SizedBox(
                     height: 10,

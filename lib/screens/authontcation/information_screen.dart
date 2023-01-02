@@ -13,6 +13,7 @@ class InformationScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
+        height: double.maxFinite,
         decoration: const BoxDecoration(
           image: DecorationImage(
             image: AssetImage("assets/images/img_1.png"),
@@ -25,6 +26,7 @@ class InformationScreen extends StatelessWidget {
           children: [
             Row(
               mainAxisAlignment: MainAxisAlignment.end,
+
               children: const [
                 SizedBox(
                     width: 200,
@@ -47,7 +49,10 @@ class InformationScreen extends StatelessWidget {
             ),
             const CustomText(
               text:
-                  "Here is the best and fastost way to know the condition of your child, it isa program to talk to a robot and access to an initial diagnosis and obtain medical assistance",
+              "Here is the best and fastost way to know the"
+                  " condition of your child, it isa program to talk "
+                  "to a robot and access to an initial "
+                  "diagnosis and obtain medical assistance",
               fontSise: 20,
               fontWeight: FontWeight.normal,
               color: ColorsApp.black,

@@ -40,8 +40,9 @@ class CustomButton extends StatelessWidget {
           child: Center(
             child: CustomText(
               text: text,
-              fontSise: 20,
-              fontWeight: FontWeight.w600,
+              fontSise: 32,
+              fontWeight: FontWeight.w500
+              ,
             ),
           )),
     );
